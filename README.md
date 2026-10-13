@@ -9,7 +9,7 @@ WorkBite combines Work Stack's task interface and native task authority with Sta
 Requires Node.js 20 or newer and Windows x64 or Linux x64 with glibc 2.28 or newer (including AlmaLinux 8). Python, Rust and Bun are bundled or compiled into the native suite.
 
 ```sh
-npm install -g workbite@0.1.0
+npm install -g workbite@0.1.1
 workbite install
 ```
 
@@ -25,7 +25,9 @@ On Linux:
 workbite open --workspace "$HOME/WorkBiteWorkspace" --init
 ```
 
-Reopen the same workspace without `--init`. WorkBite launches the Work Stack terminal interface with its execution dock connected to StackBite. Agents continue running when the interface closes.
+After this first setup, just run `workbite` to reopen the same workspace. Use `--workspace` to select another workspace; `--init` is only for creating one. WorkBite launches the Work Stack terminal interface with its execution dock connected to StackBite. Agents continue running when the interface closes.
+
+Launcher 0.1.1 reuses the verified 0.1.0 native bundle; this update does not replace the running backends.
 
 `workbite check` verifies the installed suite. Downloads and every installed file are checked against the release's pinned SHA-256 hashes.
 
